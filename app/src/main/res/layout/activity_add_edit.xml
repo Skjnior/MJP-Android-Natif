@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tvTitleAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nouvel Entrée"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp"/>
+
+        <EditText
+            android:id="@+id/etTitre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Titre du journal"
+            android:minHeight="48dp"
+            android:inputType="textCapSentences"/>
+
+        <EditText
+            android:id="@+id/etContenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Votre contenu..."
+            android:minLines="5"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Date de l'événement"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tags (optionnels)"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <CheckBox
+            android:id="@+id/cbPersonnel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personnel"/>
+
+        <CheckBox
+            android:id="@+id/cbTravail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Travail"/>
+
+        <CheckBox
+            android:id="@+id/cbVoyage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Voyage"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choisir une icône"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <Spinner
+            android:id="@+id/spImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="Enregistrer"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"/>
+
+    </LinearLayout>
+</ScrollView>

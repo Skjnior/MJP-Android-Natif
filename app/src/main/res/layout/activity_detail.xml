@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- En-tête fixe pour l'image -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="0dp"
+        android:backgroundTint="?attr/colorPrimary">
+
+        <ImageView
+            android:id="@+id/ivDetailHeader"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerInside"
+            android:padding="40dp"
+            android:src="@android:drawable/ic_menu_edit"
+            app:tint="@android:color/white" />
+            
+    </androidx.cardview.widget.CardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvDetailDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="01/01/2024"
+                android:textSize="16sp"
+                android:alpha="0.7" />
+
+            <TextView
+                android:id="@+id/tvDetailTitre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Titre du Journal"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:background="?attr/colorPrimary" />
+
+            <TextView
+                android:id="@+id/tvDetailTags"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@android:drawable/toast_frame"
+                android:paddingHorizontal="14dp"
+                android:paddingVertical="6dp"
+                android:text="Tags"
+                android:textSize="14sp"
+                android:alpha="0.8" />
+
+            <TextView
+                android:id="@+id/tvDetailContenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="28dp"
+                android:lineSpacingExtra="8dp"
+                android:text="Le contenu du journal s'affiche ici."
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
