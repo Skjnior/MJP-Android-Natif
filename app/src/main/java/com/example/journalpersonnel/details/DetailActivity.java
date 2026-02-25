@@ -23,6 +23,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView tvTags = findViewById(R.id.tvDetailTags);
         TextView tvContenu = findViewById(R.id.tvDetailContenu);
         ImageView ivHeaderIcon = findViewById(R.id.ivDetailHeader);
+        TextView tvIconName = findViewById(R.id.tvDetailIconName);
 
         if (entity != null) {
             tvDate.setText(entity.getDate());
@@ -33,6 +34,17 @@ public class DetailActivity extends AppCompatActivity {
             if (ivHeaderIcon != null) {
                 ivHeaderIcon.setImageResource(entity.getImageResId());
             }
+            if (tvIconName != null) {
+                tvIconName.setText(mapResToName(entity.getImageResId()));
+            }
         }
+    }
+
+    private String mapResToName(int resId) {
+        if (resId == android.R.drawable.ic_menu_agenda)
+            return "Agenda";
+        if (resId == android.R.drawable.ic_menu_my_calendar)
+            return "Calendrier";
+        return "Standard";
     }
 }

@@ -8,6 +8,13 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,9 +50,15 @@ public class AddEditJournalActivity extends AppCompatActivity {
         spImage = findViewById(R.id.spImage);
         Button btnSave = findViewById(R.id.btnSave);
 
-        String[] images = { "Journal 1", "Journal 2", "Journal 3" };
-        spImage.setAdapter(new ArrayAdapter<>(this,
-                android.R.layout.simple_spinner_dropdown_item, images));
+        String[] iconNames = { "Standard", "Agenda", "Calendrier" };
+        int[] iconRes = {
+                android.R.drawable.ic_menu_edit,
+                android.R.drawable.ic_menu_agenda,
+                android.R.drawable.ic_menu_my_calendar
+        };
+
+        IconSpinnerAdapter adapter = new IconSpinnerAdapter(iconNames, iconRes);
+        spImage.setAdapter(adapter);
 
         // Vérifier si c'est une modification
         existingEntity = (JournalEntity) getIntent().getSerializableExtra("entity");
@@ -122,6 +135,49 @@ public class AddEditJournalActivity extends AppCompatActivity {
         if (resId == android.R.drawable.ic_menu_my_calendar)
             return 2;
         return 0;
+    }
+
+    private class IconSpinnerAdapter extends BaseAdapter {
+        private String[] names;
+        private int[] icons;
+
+        public IconSpinnerAdapter(String[] names, int[] icons) {
+            this.names = names;
+            this.icons = icons;
+        }
+
+        @Override
+        public int getCount() {
+            return names.length;
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return names[position];
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return position;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            if (convertView == null) {
+                convertView = LayoutInflater.from(AddEditJournalActivity.this)
+                        .inflate(R.layout.spinner_item_with_icon, parent, false);
+            }
+            ImageView iv = convertView.findViewById(R.id.ivIcon);
+            TextView tv = convertView.findViewById(R.id.tvName);
+            iv.setImageResource(icons[position]);
+            tv.setText(names[position]);
+            return convertView;
+        }
+
+        @Override
+        public View getDropDownView(int position, View convertView, ViewGroup parent) {
+            return getView(position, convertView, parent);
+        }
     }
 
     @Override
