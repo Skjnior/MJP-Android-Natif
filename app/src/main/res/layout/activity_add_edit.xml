@@ -23,7 +23,7 @@
             android:id="@+id/etTitre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Titre du journal"
+            android:hint="Titre du journal *"
             android:minHeight="48dp"
             android:inputType="textCapSentences"/>
 
@@ -31,7 +31,7 @@
             android:id="@+id/etContenu"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Votre contenu..."
+            android:hint="Votre contenu... *"
             android:minLines="5"
             android:gravity="top"
             android:inputType="textMultiLine"
@@ -40,7 +40,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Date de l'événement"
+            android:text="Date de l'événement *"
             android:textStyle="bold"
             android:layout_marginTop="20dp"/>
 
@@ -55,7 +55,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tags (optionnels)"
+            android:text="Tags * (au moins un obligatoire)"
             android:textStyle="bold"
             android:layout_marginTop="20dp"/>
 
@@ -80,7 +80,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Choisir une icône"
+            android:text="Choisir une icône *"
             android:textStyle="bold"
             android:layout_marginTop="20dp"/>
 

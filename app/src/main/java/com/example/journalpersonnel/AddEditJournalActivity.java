@@ -88,8 +88,23 @@ public class AddEditJournalActivity extends AppCompatActivity {
         String titre = etTitre.getText().toString().trim();
         String contenu = etContenu.getText().toString().trim();
 
-        if (titre.isEmpty() || contenu.isEmpty()) {
-            Toast.makeText(this, "Titre et contenu obligatoires", Toast.LENGTH_SHORT).show();
+        if (titre.isEmpty()) {
+            etTitre.setError("Le titre est obligatoire");
+            Toast.makeText(this, "Veuillez renseigner le titre", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        etTitre.setError(null);
+
+        if (contenu.isEmpty()) {
+            etContenu.setError("Le contenu est obligatoire");
+            Toast.makeText(this, "Veuillez renseigner le contenu", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        etContenu.setError(null);
+
+        boolean hasTag = cbPersonnel.isChecked() || cbTravail.isChecked() || cbVoyage.isChecked();
+        if (!hasTag) {
+            Toast.makeText(this, "Veuillez sélectionner au moins un tag (Personnel, Travail ou Voyage)", Toast.LENGTH_LONG).show();
             return;
         }
 
