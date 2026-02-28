@@ -15,6 +15,28 @@
 - **Thème Adaptatif** : Support complet du **Mode Sombre** et **Mode Clair** selon les réglages du système.
 - **Bouton d'Action Rapide (FAB)** : Accès direct à la création depuis l'écran de liste.
 
+## Captures d'écran
+
+### Écran d'accueil
+![Écran d'accueil](images/Welcom%20Screen.png)
+
+### Liste des journaux
+![Liste des journaux](images/liste%20des%20journal.png)
+
+### Création d'un journal
+![Création d'un journal](images/creation%20d'un%20journal.png)
+
+### Écran de détails
+![Écran de détails](images/Details%20screen.png)
+
+### Menu d'options
+![Menu d'options](images/options.png)
+
+### Autres aperçus
+![Aperçu 1](images/Screenshot_20260226_110233.png)
+![Aperçu 2](images/Screenshot_20260228_230305.png)
+![Aperçu 3](images/Screenshot_20260228_230317.png)
+
 ## Spécifications Techniques
 - **Langage** : Java
 - **Base de Données** : SQLite (persistance locale)
