@@ -18,16 +18,16 @@
 ## Captures d'écran
 
 ### Écran d'accueil
-![Écran d'accueil](images/Welcom%20Screen.png)
+![Écran d'accueil](images/welcome-screen.png)
 
 ### Liste des journaux
-![Liste des journaux](images/liste%20des%20journal.png)
+![Liste des journaux](images/liste-journaux.png)
 
 ### Création d'un journal
-![Création d'un journal](images/creation%20d'un%20journal.png)
+![Création d'un journal](images/creation-journal.png)
 
 ### Écran de détails
-![Écran de détails](images/Details%20screen.png)
+![Écran de détails](images/details-screen.png)
 
 ### Menu d'options
 ![Menu d'options](images/options.png)
